@@ -21,3 +21,4 @@ rectangle Сервис {
   (Подать запрос на аннуляцию) .> (Аннулировать пользователя) : аннуляция
 }
 @enduml
+![image](https://user-images.githubusercontent.com/91758831/227707706-9e3f27d5-a4be-49c9-9983-36ac333c351b.png)
