@@ -1,5 +1,5 @@
 ## Паттерн Итератор
-``
+```{py}
 from collections.abc import Iterator, Iterable
 
 
@@ -36,12 +36,12 @@ if __name__ == "__main__":
    col = Collection(["Is", "anyone", "here", "?"])
    print(list(col))
    print(list(col.reverse_it()))
-``
+```
 ![](Iterator.png)
 
 
 ## Паттерн Посетитель
-``
+```{py}
 class Visitor(object):
     """Посетитель"""
 
@@ -105,5 +105,5 @@ three.draw(visitor)
 
 four = Sovremennik()
 four.draw(visitor)
-``
+```
 ![](Visitor.png)
