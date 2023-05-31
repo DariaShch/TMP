@@ -1,0 +1,41 @@
+class WindowFactory:
+    @classmethod
+    def create_window(cls, name):
+       """Метод создания окна, возврашает класс окно"""
+       return cls.Window(name)
+    @classmethod
+    def create_button(cls, name):
+       """Метод создания кнопки, возврашает класс кнопки"""
+       return cls.Button(name)
+
+class WindowFactory:
+    @classmethod
+    def create_window(cls, name):
+      """"Метод создания окна, возврашает класс окно"""
+      return cls.Window(name)
+    @classmethod
+    def create_button(cls, name):
+      """Метод создания кнопки, возврашает класс кнопки"""
+      return cls.Button(name)
+
+class LinuxFactory(WindowFactory):
+    class Window:
+        def __init__(self, name):
+            self.name = name
+            self.button = []
+            self.style = 'Ubuntu window style'
+        def add_button(self, btn):
+            self.button.append(btn.name)
+        def show(self):
+            print( '{} - {} and {}'.format(self.name, self.style, self.button))
+    class Button:
+        def __init__(self, name):
+            self.name = name
+            self.style = 'Ubuntu button style'
+
+
+def create_dialog(factory):
+    wind = factory.create_window('Form1')
+    button = factory.create_button('Button1')
+    wind.add_button(button)
+    return wind
